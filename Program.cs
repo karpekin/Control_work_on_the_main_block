@@ -18,6 +18,7 @@ for (int i = 0; i < array.Length; i++)
 string[] array2 = new string[l];
 
 FillArray(array);
+PrintArray();
 
 string[] FillArray(string[] array)
 {
@@ -31,4 +32,11 @@ for (int i = 0; i < array.Length; i++)
         }
 }
 return array2;
+}
+
+void PrintArray()
+{
+    string array3 = "[" + string.Join(", ", array2) + "]";
+Console.WriteLine(array3);
+
 }
