@@ -5,10 +5,7 @@
 // коллекциями, лучше обойтись исключительно массивами.
 
 string[] array = new string[] {"Hello", "2-", "world", ":-)"};
-GetLengthArray(array);
 
-int GetLengthArray(string[] array)
-{
 int l = 0;
 for (int i = 0; i < array.Length; i++)
 {
@@ -17,5 +14,21 @@ for (int i = 0; i < array.Length; i++)
         l = l + 1;
     }
 }
-return l;
+
+string[] array2 = new string[l];
+
+FillArray(array);
+
+string[] FillArray(string[] array)
+{
+int j = 0;
+for (int i = 0; i < array.Length; i++)
+{
+        if (array[i].Length <= 3)
+        {
+            array2[j] = array[i];
+            j = j + 1;
+        }
+}
+return array2;
 }
